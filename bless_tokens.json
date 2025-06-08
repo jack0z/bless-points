@@ -1,0 +1,10 @@
+{
+  "tokens": [
+    {
+      "name": "luka.pengal@gmail.com",
+      "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMzhlOTU4MjAzYjYyOTVmZThjYWMiLCJwdWJsaWNBZGRyZXNzIjoiMkNzWmpBMVd1VVJxa051anp3dlBuRkcxWUsyakNTTUxaeTdNQmpuOW93eTUiLCJ3YWxsZXRUeXBlIjoic29sYW5hIiwiaWF0IjoxNzQ0NzEzOTYyLCJleHAiOjE3NzYyNzE1NjJ9._ymvvyqbJoxQlS6IvHzdkCCTLGKXB3VKB6tEYTdaONk",
+      "user_id": "67fe38e958203b6295fe8cac",
+      "pubkey": "2CsZjA1WuURqKnujzwvPnFG1YK2jCSMLZy7MBjn9owy5"
+    }
+  ]
+} 

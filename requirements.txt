@@ -1,0 +1,4 @@
+cloudscraper
+pymongo
+schedule
+python-dotenv 
