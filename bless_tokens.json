@@ -1,10 +1,21 @@
 {
   "tokens": [
     {
-      "name": "your-email@example.com",
-      "jwt_token": "YOUR_JWT_TOKEN_HERE",
-      "user_id": "YOUR_USER_ID_HERE",
-      "pubkey": "YOUR_PUBKEY_HERE"
+      "name": "luka.pengal@gmail.com",
+      "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMzhlOTU4MjAzYjYyOTVmZThjYWMiLCJwdWJsaWNBZGRyZXNzIjoiMkNzWmpBMVd1VVJxa051anp3dlBuRkcxWUsyakNTTUxaeTdNQmpuOW93eTUiLCJ3YWxsZXRUeXBlIjoic29sYW5hIiwiaWF0IjoxNzQ0NzEzOTYyLCJleHAiOjE3NzYyNzE1NjJ9._ymvvyqbJoxQlS6IvHzdkCCTLGKXB3VKB6tEYTdaONk",
+      "user_id": "67fe38e958203b6295fe8cac",
+      "pubkey": "12D3KooWCuowNmKEDvF9gYT9rWHjYiehr4ururW3NWj7GSxbhgBu"
+
+    },
+    {
+        "name": "idk",
+      "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODExMzkyOGM1MDFlOWQwOTE5NTZkMDgiLCJwdWJsaWNBZGRyZXNzIjoiOWsyalNXM0REQWRZVmR4Y2NKYWpyRDhzUTN0NEZRR0RRTnM2M01zdk1RSnEiLCJ3YWxsZXRUeXBlIjoic29sYW5hIiwiaWF0IjoxNzQ1OTU5MjA5LCJleHAiOjE3Nzc1MTY4MDl9.HVl-O09RVrprHa08NYfVU2SHVvrqLlYKFOXa-C2fXSQ",
+      "user_id": "68113928c501e9d091956d08",
+      "pubkey": "12D3KooWPJdS7wuTWW7fU7ZVLEMVLTPUsKqHTSTPtL5DiLWG5tD3"
+
+
+
+            
     }
   ]
 } 

@@ -37,9 +37,16 @@ class BlessUptimeTracker:
         self.db_client = None
         self.db = None
         self.collection = None
-        self.scraper = cloudscraper.create_scraper()
         self.proxies = self.load_proxies()
         self.setup_database()
+        # Initialize cloudscraper session
+        self.scraper = cloudscraper.create_scraper(
+            browser={
+                'browser': 'chrome',
+                'platform': 'windows',
+                'desktop': True
+            }
+        )
 
     def setup_database(self):
         """Initialize MongoDB connection"""
@@ -116,11 +123,17 @@ class BlessUptimeTracker:
 
     def fetch_overview_data(self, token, proxy=None):
         headers = {
-            "Authorization": f"Bearer {token}"
+            "Authorization": f"Bearer {token}",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Origin": "https://bless.network",
+            "Referer": "https://bless.network/"
         }
         try:
             logger.info("Making overview API request...")
-            response = self.scraper.get(BLESS_OVERVIEW_API_URL, headers=headers, timeout=30, proxy=proxy)
+            proxies = {"http": proxy, "https": proxy} if proxy else None
+            response = self.scraper.get(BLESS_OVERVIEW_API_URL, headers=headers, timeout=30, proxies=proxies)
             logger.info(f"Overview API Response Status: {response.status_code}")
             if response.status_code == 200:
                 try:
@@ -139,11 +152,17 @@ class BlessUptimeTracker:
 
     def fetch_uptime_data(self, token, pubkey, proxy=None):
         headers = {
-            "Authorization": f"Bearer {token}"
+            "Authorization": f"Bearer {token}",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Origin": "https://bless.network",
+            "Referer": "https://bless.network/"
         }
         try:
             logger.info("Making earnings API request...")
-            response = self.scraper.get(BLESS_EARNINGS_API_URL, headers=headers, timeout=30, proxy=proxy)
+            proxies = {"http": proxy, "https": proxy} if proxy else None
+            response = self.scraper.get(BLESS_EARNINGS_API_URL, headers=headers, timeout=30, proxies=proxies)
             logger.info(f"Earnings API Response Status: {response.status_code}")
             if response.status_code == 200:
                 try:
